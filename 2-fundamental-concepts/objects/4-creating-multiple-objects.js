@@ -1,3 +1,5 @@
+// ==== CREATING MULTIPLE OBJECTS =====
+
 var employee1 = {};
 employee1.firstName = "Michael";
 employee1.lastName = "Scott";
