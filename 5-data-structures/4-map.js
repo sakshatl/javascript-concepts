@@ -6,7 +6,7 @@ for (let [key, value] of map) {
   console.log(key, value);
 }
 
-// === Adding a key / value parr ======
+// === Adding a key / value pair ======
 map.set("c", 3);
 console.log(map);
 
