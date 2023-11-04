@@ -29,8 +29,6 @@ function maxSumSubarrayOkSizeK(arr = [], k) {
 */
 
 function maxSumSubarrayOkSizeK2(nums = [], k) {
-  nums = Array.from(new Set(nums));
-
   let maxSum = 0;
   let currentSum = 0;
 
