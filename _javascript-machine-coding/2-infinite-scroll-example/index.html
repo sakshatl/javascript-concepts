@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scroll</title>
+  
+  <style>
+    .app {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .image__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .image__list img {
+      max-width: 100%;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app" class="app">
+    <div id="image__list" class="image__list">
+
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
