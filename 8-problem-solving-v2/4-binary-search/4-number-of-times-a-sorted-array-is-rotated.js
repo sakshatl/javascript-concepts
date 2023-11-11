@@ -1,6 +1,6 @@
 function numberOfTimesSortedArrayIsRotated(arr = []) {
   /*
-    - number of times the array is rotated will be the index of min element
+    - number of times the array is rotated will be equal to the index of minimum element
   */
   let start = 0;
   let end = arr.length - 1;
