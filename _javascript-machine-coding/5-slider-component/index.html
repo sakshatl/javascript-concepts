@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla JavaScript Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #slider-container {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    #slider {
+      display: flex;
+      gap: 32px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      width: calc(100% / 5); /* Adjust the width based on the number of items you want visible */
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      height: 250px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div id="slider-container">
+  <div id="slider">
+    <div class="slide" style="background-color: #ff7f50;">Slide 1</div>
+    <div class="slide" style="background-color: #00ced1;">Slide 2</div>
+    <div class="slide" style="background-color: #9370db;">Slide 3</div>
+    <div class="slide" style="background-color: #32cd32;">Slide 4</div>
+    <div class="slide" style="background-color: #ff7f50;">Slide 5</div>
+    <div class="slide" style="background-color: #00ced1;">Slide 6</div>
+    <div class="slide" style="background-color: #9370db;">Slide 7</div>
+    <div class="slide" style="background-color: #32cd32;">Slide 8</div>
+    <div class="slide" style="background-color: #ff7f50;">Slide 9</div>
+    <div class="slide" style="background-color: #00ced1;">Slide 10</div>
+    <div class="slide" style="background-color: #9370db;">Slide 11</div>
+    <div class="slide" style="background-color: #32cd32;">Slide 12</div>
+    <div class="slide" style="background-color: #ff7f50;">Slide 13</div>
+    <div class="slide" style="background-color: #00ced1;">Slide 14</div>
+    <div class="slide" style="background-color: #9370db;">Slide 15</div>
+    <div class="slide" style="background-color: #32cd32;">Slide 16</div>
+  </div>
+</div>
+
+<button onclick="prevSlide()">Previous</button>
+<button onclick="nextSlide()">Next</button>
+
+<script>
+  const slider = document.getElementById('slider');
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const offset = -index * (100 / 4) + '%';
+    slider.style.transform = 'translateX(' + offset + ')';
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % (slides.length - 3);
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length - 3) % (slides.length - 3);
+    showSlide(currentIndex);
+  }
+</script>
+
+</body>
+</html>

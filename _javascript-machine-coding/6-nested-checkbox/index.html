@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Checboxes</title>
+</head>
+<body>
+  <ul>
+    <li>
+      <label>
+        <input class="parent-checkbox" id="parent-checkbox-1" type="checkbox" /> Parent 1
+      </label>
+      <ul>
+        <li>
+          <label>
+            <input class="child-checkbox" data-parent="parent-checkbox-1" type="checkbox" /> Child 1 Parent 1
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="child-checkbox" data-parent="parent-checkbox-1" type="checkbox" /> Child 2 Parent 1
+          </label>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label>
+        <input class="parent-checkbox" id="parent-checkbox-2" type="checkbox" /> Parent 2
+      </label>
+      <ul>
+        <li>
+          <label>
+            <input class="child-checkbox" data-parent="parent-checkbox-2" type="checkbox" /> Child 1 Parent 2
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="child-checkbox" data-parent="parent-checkbox-2" type="checkbox" /> Child 2 Parent 2
+          </label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script src="./app.js"></script>
+</body>
+</html>

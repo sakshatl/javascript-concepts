@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-list .image-container > img {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+
+.image-list .image-container > img.loaded {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
